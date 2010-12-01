@@ -1,0 +1,9 @@
+<?php
+
+$db_host = "localhost";
+$db_user = "dbuser";
+$db_password = "password";
+$db_database = "siteroulette_db";
+
+
+?>
