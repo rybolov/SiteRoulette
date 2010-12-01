@@ -1,7 +1,7 @@
 <?php
-//qr-bar.co.de main script
+//SiteRoulette main script
 //Michael Smith rybolov@ryzhe.ath.cx
-// http://qr-bar.co.de
+// http://www.guerilla-ciso.com
 
 require 'config.php';
 
