@@ -3,3 +3,15 @@ Michael Smith rybolov@ryzhe.ath.cx
 http://www.guerilla-ciso.com
 
 
+To install:
+Requires php mysql library
+Untar
+
+Make and populate a database:
+vi createdb.sql
+mysql -u root -p < createdb.sql
+mysql -u root -p < tablestructure.sql
+
+Configure:
+    cp config.php.sample config.php
+    vi config.php

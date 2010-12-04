@@ -3,8 +3,10 @@
 //Michael Smith rybolov@ryzhe.ath.cx
 // http://www.guerilla-ciso.com
 
-require 'config.php';
-
+//require 'config.php';
+if (!@include 'config.php') {
+    die('Config not found.  Please read INSTALL.' . mysql_error());
+}
 
 $con = mysql_connect($db_host ,$db_user, $db_password);
 if (!$con)

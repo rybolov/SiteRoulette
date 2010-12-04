@@ -35,5 +35,6 @@ CREATE TABLE IF NOT EXISTS `redirect_links` (
 -- Dumping data for table `redirect_links`
 --
 
-INSERT INTO `qr_redirect_links` (`id`, `url`, `weight`, `comment`, `active`, `iphone`, `android`, `mobileonly`) VALUES
+INSERT INTO `redirect_links` (`id`, `url`, `weight`, `comment`, `active`, `iphone`, `android`, `mobileonly`) VALUES
 ('', 'http://www.google.com', 1, 'Test Site', 'y', 'y', 'y', 'n'),
+('', 'http://www.guerilla-ciso.com/', 1, 'Test Site', 'y', 'y', 'y', 'n');
