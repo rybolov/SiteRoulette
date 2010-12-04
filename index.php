@@ -76,16 +76,16 @@ while($row = mysql_fetch_array($result))
   echo ("<meta http-equiv=\"refresh\" content=\"1;url=$newurl\">");
   
   //give a page with javascript method to redirect
-  echo ("<SCRIPT language=\"JavaScript\">");
-  echo ("<!--");
-  echo ("window.location=\"$newurl"");
-  echo ("//-->");
-  echo ("</SCRIPT>");
+  echo ("<SCRIPT language=\"JavaScript\">\r");
+  echo ("<!--\r");
+  echo ("window.location=\"$newurl\";\r");
+  echo ("//-->\r");
+  echo ("</SCRIPT>\r");
   
   //give a link/manual method to redirect
   echo ("</head><body>");
   echo ("<a href=\"$newurl\">Click Here</a>");
-  echo (</body>)
+  echo ("</body>");
   }
 
 mysql_close($con);
