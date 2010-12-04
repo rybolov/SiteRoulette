@@ -27,7 +27,11 @@ CREATE TABLE IF NOT EXISTS `redirect_links` (
   `active` enum('y','n') collate utf8_unicode_ci default 'y',
   `iphone` enum('y','n') collate utf8_unicode_ci default 'y',
   `android` enum('y','n') collate utf8_unicode_ci default 'y',
+  `blackberry` enum('y','n') collate utf8_unicode_ci default 'y',
   `mobileonly` enum('y','n') collate utf8_unicode_ci default 'n',
+  `linux` enum('y','n') collate utf8_unicode_ci default 'y',
+  `windows` enum('y','n') collate utf8_unicode_ci default 'y',
+  `mac` enum('y','n') collate utf8_unicode_ci default 'y',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=0 ;
 

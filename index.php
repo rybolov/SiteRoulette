@@ -50,6 +50,19 @@ if ($_GET[$parole])
       $querystring .= " AND iphone='y'";
       //exit("query:$querystring");
     }
+    elseif (preg_match("/Linux/", $_SERVER['HTTP_USER_AGENT']))
+    {
+      $querystring .= " AND linux='y' AND mobileonly='n'";
+      //exit("query:$querystring");
+    }elseif (preg_match("/Windows/", $_SERVER['HTTP_USER_AGENT']))
+    {
+      $querystring .= " AND windows='y' AND mobileonly='n'";
+      //exit("query:$querystring");
+    }elseif (preg_match("/Macintosh/", $_SERVER['HTTP_USER_AGENT']))
+    {
+      $querystring .= " AND mac='y' AND mobileonly='n'";
+      //exit("query:$querystring");
+    }
     else 
     {
       $querystring .= " AND mobileonly='n'";
@@ -66,8 +79,11 @@ $result = mysql_query($querystring);
 while($row = mysql_fetch_array($result))
   {
   $newurl = $row['url'];
+  //Multiple redirect methods are used for compatibility across browsers
+  //Think: browser variants, noscript, and mobile devices
   
-  //Use the php header method to redirect
+  
+  //Use the php header method to redirect, should work 99% of the time.
   header( "Location: $newurl" ) ;
   
   echo("<html><head>");
@@ -82,7 +98,7 @@ while($row = mysql_fetch_array($result))
   echo ("//-->\r");
   echo ("</SCRIPT>\r");
   
-  //give a link/manual method to redirect
+  //if all else fails, give a link/manual method to redirect
   echo ("</head><body>");
   echo ("<a href=\"$newurl\">Click Here</a>");
   echo ("</body>");
