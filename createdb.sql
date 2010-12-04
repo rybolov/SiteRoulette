@@ -4,7 +4,7 @@
 
 Create DATABASE siteroulette;
 
-GRANT SELECT ON siteroulette.* to 'username@localhost' IDENTIFIED BY 'password';
+GRANT SELECT ON siteroulette.* to 'username'@'localhost' IDENTIFIED BY 'password';
 
 FLUSH PRIVILEGES;
 

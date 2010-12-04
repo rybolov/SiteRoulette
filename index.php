@@ -5,7 +5,7 @@
 
 //require 'config.php';
 if (!@include 'config.php') {
-    die('Config not found.  Please read INSTALL.' . mysql_error());
+    die('Config not found.  Please read README.');
 }
 
 $con = mysql_connect($db_host ,$db_user, $db_password);
@@ -17,17 +17,17 @@ if (!$con)
 mysql_select_db($db_database, $con);
 
 
-$querystring = "SELECT url FROM qr_redirect_links";
+$querystring = "SELECT url FROM redirect_links";
 
 
 //See config.php for info and setup.
 if ($_GET[$parole])
   {
-    $parole = $_GET[$parole];
-    //exit("Parole is $parole");
-      if(preg_match("/^[0-9]{1,5}$/", $parole)) 
+    $parole_ID = $_GET[$parole];
+    //exit("Parole is $parole_ID");
+      if(preg_match("/^[0-9]{1,5}$/", $parole_ID)) 
       {
-        $querystring .= " WHERE id='$parole'";
+        $querystring .= " WHERE id='$parole_ID'";
         //exit("query:$querystring");
       }
       else
@@ -66,7 +66,26 @@ $result = mysql_query($querystring);
 while($row = mysql_fetch_array($result))
   {
   $newurl = $row['url'];
+  
+  //Use the php header method to redirect
   header( "Location: $newurl" ) ;
+  
+  echo("<html><head>");
+  
+  //Use a meta-tag method to redirect
+  echo ("<meta http-equiv=\"refresh\" content=\"1;url=$newurl\">");
+  
+  //give a page with javascript method to redirect
+  echo ("<SCRIPT language=\"JavaScript\">");
+  echo ("<!--");
+  echo ("window.location=\"$newurl"");
+  echo ("//-->");
+  echo ("</SCRIPT>");
+  
+  //give a link/manual method to redirect
+  echo ("</head><body>");
+  echo ("<a href=\"$newurl\">Click Here</a>");
+  echo (</body>)
   }
 
 mysql_close($con);

@@ -6,11 +6,12 @@
 $parole = "parole";
 
 
-
+//Database details
+//The database user only needs SELECT privilege
 $db_host = "localhost";
+$db_database = "siteroulette_db";
 $db_user = "dbuser";
 $db_password = "password";
-$db_database = "siteroulette_db";
 
 
 ?>
