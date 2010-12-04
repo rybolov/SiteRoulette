@@ -1,6 +1,12 @@
 SiteRoulette main script
 Michael Smith rybolov@ryzhe.ath.cx
 http://www.guerilla-ciso.com
+You can "see" a working version at http://qr-bar.co.de/ or by reading the included QR code
+
+A sample tablestructure is in tablestructure.sql
+The higher the value of the 'weight' table in the database, the more frequent the url will be returned.
+
+
 
 
 To install:

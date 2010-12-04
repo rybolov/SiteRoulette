@@ -20,14 +20,14 @@ mysql_select_db($db_database, $con);
 $querystring = "SELECT url FROM qr_redirect_links";
 
 
-//use ?shizzle=NN to look at a specific url.
-if ($_GET['shizzle'])
+//See config.php for info and setup.
+if ($_GET[$parole])
   {
-    $shizzle = $_GET['shizzle'];
-    //exit("Shizzle is $shizzle");
-      if(preg_match("/^[0-9]{1,5}$/", $shizzle)) 
+    $parole = $_GET[$parole];
+    //exit("Parole is $parole");
+      if(preg_match("/^[0-9]{1,5}$/", $parole)) 
       {
-        $querystring .= " WHERE id='$shizzle'";
+        $querystring .= " WHERE id='$parole'";
         //exit("query:$querystring");
       }
       else

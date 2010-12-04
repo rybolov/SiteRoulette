@@ -1,10 +1,12 @@
 Places to go, things ToDo:
-Add a license
+
 Change "shizzle" to something configurable
-Database seed script
-Install instructions
 Check for dead links
 Targetting for blackberry and other mobiles
 Targetting for Windows, Linux, OSX
 Redirect using php/http 302, meta tag, and javascript (fail-proofing the redirect method)
 
+Completed:
+Database seed script
+Install instructions
+Add a license--used GPL V2

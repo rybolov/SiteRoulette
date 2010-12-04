@@ -1,5 +1,12 @@
 <?php
 
+//"parole" is the url parameter to set if you want to refer to a specific url by the index
+//ie http://server.org/SiteRoulette/index.php?parole=1
+//This is configurable so that you can keep people from guessing/enumerating all of your urls.
+$parole = "parole";
+
+
+
 $db_host = "localhost";
 $db_user = "dbuser";
 $db_password = "password";

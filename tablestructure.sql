@@ -29,12 +29,12 @@ CREATE TABLE IF NOT EXISTS `redirect_links` (
   `android` enum('y','n') collate utf8_unicode_ci default 'y',
   `mobileonly` enum('y','n') collate utf8_unicode_ci default 'n',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=51 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=0 ;
 
 --
 -- Dumping data for table `redirect_links`
 --
 
-INSERT INTO `redirect_links` (`id`, `url`, `weight`, `comment`, `active`, `iphone`, `android`, `mobileonly`) VALUES
-('', 'http://www.google.com', 1, 'Test Site', 'y', 'y', 'y', 'n'),
-('', 'http://www.guerilla-ciso.com/', 1, 'Test Site', 'y', 'y', 'y', 'n');
+INSERT INTO `redirect_links` (`url`, `weight`, `comment`, `active`, `iphone`, `android`, `mobileonly`) VALUES
+('http://www.google.com', 1, 'Test Site', 'y', 'y', 'y', 'n'),
+('http://www.guerilla-ciso.com/', 1, 'Test Site', 'y', 'y', 'y', 'n');
