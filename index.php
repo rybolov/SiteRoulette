@@ -54,11 +54,13 @@ if ($_GET[$parole])
     {
       $querystring .= " AND linux='y' AND mobileonly='n'";
       //exit("query:$querystring");
-    }elseif (preg_match("/Windows/", $_SERVER['HTTP_USER_AGENT']))
+    }
+    elseif (preg_match("/Windows/", $_SERVER['HTTP_USER_AGENT']))
     {
       $querystring .= " AND windows='y' AND mobileonly='n'";
       //exit("query:$querystring");
-    }elseif (preg_match("/Macintosh/", $_SERVER['HTTP_USER_AGENT']))
+    }
+    elseif (preg_match("/Macintosh/", $_SERVER['HTTP_USER_AGENT']))
     {
       $querystring .= " AND mac='y' AND mobileonly='n'";
       //exit("query:$querystring");

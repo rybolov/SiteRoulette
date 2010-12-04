@@ -1,9 +1,8 @@
 Places to go, things ToDo:
 
 
-Check for dead links
-Targetting for blackberry and other mobiles
-Targetting for Windows, Linux, OSX
+Check for dead links--separate utility for the next version.
+
 
 
 Completed:
@@ -12,3 +11,5 @@ Install instructions
 Add a license--used GPL V2
 Change "shizzle" to something configurable--now set to "parole" and configurable
 Redirect using php/http 302, meta tag, and javascript (fail-proofing the redirect method)
+Targetting for blackberry and other mobiles
+Targetting for Windows, Linux, OSX
